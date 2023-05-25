@@ -4,6 +4,7 @@ from docx import Document
 app = Flask(__name__)
 
 @app.route('/')
+@app.route('/report')
 def report():
     return render_template('report.html')
 
@@ -62,5 +63,4 @@ def generate_report():
     # Send the file as a response
     return send_file('report.docx', as_attachment=True)
 if __name__ == '__main__':
-    app.debug = True
-    app.run()
+    app.run(debug = True, port=5502)

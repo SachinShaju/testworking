@@ -7,6 +7,7 @@ import yagmail
 app = Flask(__name__)
 
 @app.route('/')
+@app.route('/cert')
 def cert():
     return render_template('cert.html')
 
@@ -80,6 +81,6 @@ def send_email_with_certificate(recipient_email, certificate_path):
     )
    
 if __name__ == '__main__':
-    app.debug = True
-    app.run()
+
+    app.run(debug = True, port=5502)
 
