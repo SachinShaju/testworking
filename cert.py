@@ -82,5 +82,5 @@ def send_email_with_certificate(recipient_email, certificate_path):
    
 if __name__ == '__main__':
 
-    app.run(debug = True, port=5502)
+    app.run(debug = True)
 

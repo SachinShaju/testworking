@@ -63,4 +63,4 @@ def generate_report():
     # Send the file as a response
     return send_file('report.docx', as_attachment=True)
 if __name__ == '__main__':
-    app.run(debug = True, port=5502)
+    app.run(debug = True)
